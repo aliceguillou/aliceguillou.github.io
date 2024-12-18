@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+          <title>Dog Personality Quiz</title>
+
+
+  <style>
+  
+
+      body{font-family: 'Oswald', sans-serif; text-align: center; background-color: #FF7B24; padding: 20px;}
+
+
+
+      header{background-color: #FF7B24; color: white; padding: 20px; text-align: center;}
+
+
+      h1{font-size: 3rem; color: white; background-color: #FF7B24; text-decoration: underline;}
+
+      .start-quiz-section{padding: 40px; margin: 20px 0; background-color: #ffffff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center;}
+
+
+      .quiz-container{display: none;}
+
+
+      .result{display: none; font-size: 1.5rem; margin-top: 20px;}
+
+
+      .dog-image{max-width: 300px; margin-top: 20px;}
+
+      .image-section{padding: 40px; margin: 20px 0; background-color: #ffffff; border-radius: 8px; box-shadow: 0 5px rgba(0, 0, 0, 0.1); text-align: center; max-width: 100%;}
+
+      .image-section img{max-width: 100%; height: auto; object-fit: contain; border-radius: 8px; margin-top: 20px;}
+
+
+      button{padding: 10px 20px; background-color: #FF7B24; color: white; border: none; cursor: pointer; font-size: 1.2rem; margin-top: 20px; border-radius: 8px}
+
+
+      button:hover{background-color: #FF9B61;}
+
+      .dog-image{border-radius: 15px;}
+
+
+
+      footer{background-color: #333; color: white; text-align: center;padding: 15px 0; margin-top: auto;}
+
+
+            footer ul{list-style: none; padding: 0; margin:0; display: flex; justify-content:center; align-items:center; }
+
+
+            footer ul li{margin: 0 20px;}
+
+
+            footer ul li a{color: white; text-decoration: none; font-size: 1.2rem; padding: 10px 20px; display: block;}
+
+            footer ul li a:hover{background-color: #FC8C65; color: white;}
+
+            footer ul li a.active{background-color: #FC8C65; color: white; border-radius: 5px;}
+
+            footer ul li {margin: 10px 0;}
+
+
+
+  </style>
+
+</head>
+
+<body>
+  
+
+        <header>  
+
+
+          <h1>What's Your Dog Personality?</h1>
+
+        </header>  
+
+
+        <section class="start-quiz-section">
+
+
+          <h2> Start the Quiz</h2>
+
+
+          <p> Click below to begin discovering your companion's personality:</p>
+
+
+          <button onclick="startQuiz()">Start The Quiz!</button>
+
+        </section>
+
+
+        <section class="image-section">
+
+          <img src="Photoshop/Quiz.jpg">
+          
+
+
+        </section>
+
+
+      <div class="quiz-container">
+
+        <div id="question-container">
+
+        <h2 class="questions" id="question-text"></h2>
+
+        <div class="answer-buttons">
+
+        <button onclick="answerQuestion('0')"> Running</button>
+        <button onclick="answerQuestion('1')">Chilling At Home</button>
+        <button onclick="answerQuestion('2')">Playing With Other Doggys</button>
+
+
+        </div>
+      </div>
+
+      <button onclick="nextQuestion()"> Next Question</button>
+
+    </div>
+
+
+
+    <div id="result-container" class="result">
+
+      <h2> Your Dog's Personality:</h2>
+      <p id="dogPersonality"></p>
+
+      <img id="dogImage" class="dog-image" src="" alt="Dog Personality Image">
+
+    </div>
+
+
+        <footer>
+          
+                <ul>
+                      <li><a href="mainpage.html">Home Page</a></li>
+
+                      <li><a href="training.html">Basic Training Skills</a></li>
+
+                      <li><a href="dogessentials.html">Your Companion's Essentials</a></li>
+
+
+
+                </ul>
+
+
+        </footer>
+
+
+
+    <script src="dogquiz.js"></script>
+
+      
+
+
+</body>
+</html>
